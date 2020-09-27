@@ -1,0 +1,40 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [(opened)]="opened">
+        <div class="sidebar-buttons" fxLayout="column" fxLayoutAlign="space-evenly center">
+            <button style="margin-top: 0.5cm;" mat-icon-button matTooltip="About me" routerLink="">
+                <mat-icon> home </mat-icon>
+            </button>
+            <button style="margin-top: 0.5cm;" mat-icon-button matTooltip="About me" routerLink="/aboutme">
+            <mat-icon> person </mat-icon>
+        </button>
+            <button style="margin-top: 0.8cm;" mat-icon-button matTooltip="Skills & Expereince" routerLink="/skills&experience">
+            <mat-icon> calendar_today </mat-icon>
+        </button>
+            <button style="margin-top: 0.8cm;" mat-icon-button routerLink="/resume">
+            <mat-icon matTooltip="Resume"> list_alt </mat-icon>
+        </button>
+            <button style="margin-top: 0.8cm;" mat-icon-button routerLink="/my-work">
+            <mat-icon matTooltip="My work"> card_travel </mat-icon>
+        </button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="opened=!opened" mat-fab color="warn" matTooltip="Click on me">
+            <mat-icon>face</mat-icon>
+           </button>
+        <div class="json-data">
+            <h2>
+                My skills and experience.
+            </h2>
+            <ul *ngFor="let item of data">
+                <li>
+                    <h3>{{item.name}}<br/> {{item.description}}
+                        <br/> {{item.description1}}
+                        <br/> {{item.description2}}
+                    </h3>
+                </li>
+            </ul>
+        </div>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
