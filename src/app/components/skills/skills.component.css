@@ -1,0 +1,22 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav,
+mat-sidenav-content {
+    padding: 16px;
+    background-color: lightcoral;
+}
+
+mat-sidenav {
+    background-color: lightslategray;
+    width: 75px;
+}
+
+.json-data {
+    text-align: center;
+    text-decoration: solid;
+    text-shadow: 10ex;
+    text-overflow: ellipsis;
+    text-rendering: geometricPrecision;
+}
